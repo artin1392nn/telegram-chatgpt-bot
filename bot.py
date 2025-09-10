@@ -6,16 +6,14 @@ import openai
 import asyncio
 
 # ======= تنظیم کلیدها =======
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+TELEGRAM_TOKEN = 8284718606:AAEujT-GhTZfVfXIgmo3-zXRS5SOHUHO4Yw
 OPENAI_KEY = os.environ.get("OPENAI_API_KEY")
-openai.api_key = OPENAI_KEY
-
 # ======= نگهداری تاریخچه =======
 CONTEXTS = {}  # {user_id: [{"role":"user","content":...}, ...]}
 MAX_HISTORY = 6  # تعداد پیام‌هایی که ذخیره میشه
 
 # ======= تماس با OpenAI =======
-async def call_openai(messages):
+async def call_openai(message)
     resp = openai.ChatCompletion.create(
         model="gpt-4o-mini",
         messages=messages,
